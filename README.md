@@ -1,2 +1,2 @@
 ## Project pizzeria
-Project can view [here](https://marcocollander.github.io/project-pizzeria/dist/)
+Project can be viewed [here](https://marcocollander.github.io/project-pizzeria/dist/)
