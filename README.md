@@ -1,2 +1,2 @@
-# project-pizzeria
-Kodilla bootcamp front-end project 2019-06
+## Project pizzeria
+Project can be viewed [here](https://marcocollander.github.io/project-pizzeria/dist/)
