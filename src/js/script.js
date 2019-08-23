@@ -75,8 +75,7 @@
       const thisWidget = this;
       const newValue = parseInt(value);
 
-      /* TODO: Add validation */
-      if (newValue !== thisWidget.input.value && newValue >= settings.amountWidget.defaultMin && newValue <= settings.amountWidget.defaultMax) {
+      if (newValue !== thisWidget.value && newValue >= settings.amountWidget.defaultMin && newValue <= settings.amountWidget.defaultMax) {
         thisWidget.value = newValue;
         thisWidget.announce();
       }
@@ -243,7 +242,6 @@
       });
     }
   }
-
-
+  
   app.init();
 }
