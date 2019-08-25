@@ -70,6 +70,12 @@ body {
   background: #3b3b3b;
 }
 
+.btn-primary.disabled, .btn-primary[disabled] {
+  background: #333333;
+  border-color: #333333;
+  cursor: not-allowed;
+}
+
 .btn-secondary {
   background: #ff6b6b;
   color: #fff;
@@ -87,6 +93,12 @@ body {
 
 .btn-secondary:hover {
   background: #ff7a7a;
+}
+
+.btn-secondary.disabled, .btn-secondary[disabled] {
+  background: #b5b5b5;
+  border-color: #b5b5b5;
+  cursor: not-allowed;
 }
 
 .btn-quantity {
@@ -114,6 +126,12 @@ body {
   background: #3b3b3b;
 }
 
+.btn-quantity.disabled, .btn-quantity[disabled] {
+  background: #333333;
+  border-color: #333333;
+  cursor: not-allowed;
+}
+
 .btn-quantity--lt {
   background: #fff;
   color: #ff6b6b;
@@ -139,11 +157,21 @@ body {
   background: white;
 }
 
+.btn-quantity--lt.disabled, .btn-quantity--lt[disabled] {
+  background: white;
+  border-color: white;
+  cursor: not-allowed;
+}
+
 /* Form elements */
 input, select {
   border: 1px solid #333;
   border-radius: 4px;
   padding: 12px;
+}
+
+input.error, select.error {
+  border-color: #ff6b6b;
 }
 
 .checkbox {
@@ -240,7 +268,7 @@ input, select {
 
 .cart {
   position: absolute;
-  width: 270px;
+  width: 300px;
   right: 0;
   top: 12px;
   padding: 12px 18px;
@@ -334,8 +362,41 @@ input, select {
   opacity: 1;
 }
 
-.cart__product-name {
-  width: 150px;
+.cart__product {
+  width: 170px;
+}
+
+.cart__product-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.cart__product-details li {
+  display: block;
+  margin: 0 0 3px 0;
+  font-size: 10px;
+  color: #999999;
+  text-transform: lowercase;
+  font-style: italic;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+}
+
+.cart__product-details-label {
+  position: relative;
+  padding: 0 6px 0 0;
+  font-weight: 700;
+}
+
+.cart__product-details-label::after {
+  position: absolute;
+  content: ':';
 }
 
 .cart__action-buttons {
@@ -367,7 +428,7 @@ input, select {
 }
 
 .cart__order-price {
-  margin: 0;
+  margin: 12px 0 0 0;
   padding: 12px 0;
   list-style-type: none;
   border-top: 1px solid #e6e6e6;
