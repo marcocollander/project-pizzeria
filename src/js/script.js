@@ -1,4 +1,4 @@
-/* global Handlebars, utils, dataSource */
+/* global Handlebars, utils */
 // eslint-disable-line no-unused-vars
 
 {
@@ -79,6 +79,12 @@
 
     cart: {
       defaultDeliveryFee: 20
+    },
+
+    db: {
+      url: '//localhost:3131',
+      product: 'product',
+      order: 'order',
     }
   };
 
@@ -346,14 +352,31 @@
   const app = {
     initData: function () {
       const thisApp = this;
-      thisApp.data = dataSource;
+      thisApp.data = {};
+      const url = settings.db.url + '/' + settings.db.product;
+
+      fetch(url)
+        .then(function(rawResponse){
+          return rawResponse.json();
+        })
+        .then(function(parseResponse){
+          console.log('parseResponse', parseResponse);
+
+          /* save parseResponse as thisApp.data.products */
+          thisApp.data.products = parseResponse;
+
+          /* execute initMenu method */
+          thisApp.initMenu();
+        });
+      console.log('thisApp.data', JSON.stringify(thisApp.data));
     },
 
     initMenu: function () {
       const thisApp = this;
 
       for (let productData in thisApp.data.products) {
-        new Product(productData, thisApp.data.products[productData]);
+        //new Product(productData, thisApp.data.products[productData]);
+        new Product(thisApp.data.products[productData].id, thisApp.data.products[productData]);
       }
     },
 
@@ -367,7 +390,7 @@
       const thisApp = this;
 
       thisApp.initData();
-      thisApp.initMenu();
+      //thisApp.initMenu();
       thisApp.initCart();
     }
   };
