@@ -204,47 +204,45 @@
   ],
   "order": [
     {
-      "phone": "222333888",
-      "address": "New York City Street Five Avenue",
-      "totalNumber": 1,
-      "subtotalPrice": 9,
-      "totalPrice": 29,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "amount": 1,
-          "price": 9,
-          "priceSingle": 9,
-          "params": {}
-        }
-      ],
-      "id": 1
-    },
-    {
-      "phone": "222333888",
-      "address": "Washington White House",
+      "phone": "1234567",
+      "address": "Gdzieś albo tam",
       "totalNumber": 2,
-      "subtotalPrice": 18,
-      "totalPrice": 38,
+      "subtotalPrice": 40,
+      "totalPrice": 60,
       "deliveryFee": 20,
       "products": [
         {
-          "id": "breakfast",
+          "id": "pizza",
           "amount": 2,
-          "price": 18,
-          "priceSingle": 9,
+          "price": 40,
+          "priceSingle": 20,
           "params": {
-            "coffee": {
-              "label": "Coffee type",
+            "sauce": {
+              "label": "Sauce",
               "options": {
-                "latte": "Latte"
+                "tomato": "Tomato"
+              }
+            },
+            "toppings": {
+              "label": "Toppings",
+              "options": {
+                "olives": "Olives",
+                "redPeppers": "Red peppers",
+                "greenPeppers": "Green peppers",
+                "mushrooms": "Mushrooms",
+                "basil": "Fresh basil"
+              }
+            },
+            "crust": {
+              "label": "pizza crust",
+              "options": {
+                "standard": "standard"
               }
             }
           }
         }
       ],
-      "id": 2
+      "id": 1
     }
   ]
 }
