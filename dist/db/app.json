@@ -204,64 +204,26 @@
   ],
   "order": [
     {
-      "phone": {},
-      "totalNumber": 2,
-      "subtotalPrice": 29,
-      "totalPrice": 49,
+      "phone": "222333888",
+      "address": "New York City Street Five Avenue",
+      "totalNumber": 1,
+      "subtotalPrice": 9,
+      "totalPrice": 29,
       "deliveryFee": 20,
       "products": [
         {
-          "id": "pizza",
-          "amount": 1,
-          "price": 20,
-          "priceSingle": 20,
-          "params": {
-            "sauce": {
-              "label": "Sauce",
-              "options": {
-                "tomato": "Tomato"
-              }
-            },
-            "toppings": {
-              "label": "Toppings",
-              "options": {
-                "olives": "Olives",
-                "redPeppers": "Red peppers",
-                "greenPeppers": "Green peppers",
-                "mushrooms": "Mushrooms",
-                "basil": "Fresh basil"
-              }
-            },
-            "crust": {
-              "label": "pizza crust",
-              "options": {
-                "standard": "standard"
-              }
-            }
-          }
-        },
-        {
-          "id": "salad",
+          "id": "cake",
           "amount": 1,
           "price": 9,
           "priceSingle": 9,
-          "params": {
-            "ingredients": {
-              "label": "Ingredients",
-              "options": {
-                "cucumber": "Cucumber",
-                "tomatoes": "Tomatoes",
-                "olives": "Olives",
-                "herbs": "Fresh herbs"
-              }
-            }
-          }
+          "params": {}
         }
       ],
       "id": 1
     },
     {
-      "phone": "",
+      "phone": "222333888",
+      "address": "Washington White House",
       "totalNumber": 2,
       "subtotalPrice": 18,
       "totalPrice": 38,
@@ -269,255 +231,20 @@
       "products": [
         {
           "id": "breakfast",
-          "amount": 1,
-          "price": 9,
+          "amount": 2,
+          "price": 18,
           "priceSingle": 9,
           "params": {
             "coffee": {
               "label": "Coffee type",
               "options": {
                 "latte": "Latte"
-              }
-            }
-          }
-        },
-        {
-          "id": "salad",
-          "amount": 1,
-          "price": 9,
-          "priceSingle": 9,
-          "params": {
-            "ingredients": {
-              "label": "Ingredients",
-              "options": {
-                "cucumber": "Cucumber",
-                "tomatoes": "Tomatoes",
-                "olives": "Olives",
-                "herbs": "Fresh herbs"
               }
             }
           }
         }
       ],
       "id": 2
-    },
-    {
-      "phone": "",
-      "address": "",
-      "totalNumber": 3,
-      "subtotalPrice": 27,
-      "totalPrice": 47,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "amount": 1,
-          "price": 9,
-          "priceSingle": 9,
-          "params": {}
-        },
-        {
-          "id": "cake",
-          "amount": 2,
-          "price": 18,
-          "priceSingle": 9,
-          "params": {}
-        }
-      ],
-      "id": 3
-    },
-    {
-      "phone": "600400500",
-      "address": "London",
-      "totalNumber": 1,
-      "subtotalPrice": 9,
-      "totalPrice": 29,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "salad",
-          "amount": 1,
-          "price": 9,
-          "priceSingle": 9,
-          "params": {
-            "ingredients": {
-              "label": "Ingredients",
-              "options": {
-                "cucumber": "Cucumber",
-                "tomatoes": "Tomatoes",
-                "olives": "Olives",
-                "herbs": "Fresh herbs"
-              }
-            }
-          }
-        }
-      ],
-      "id": 4
-    },
-    {
-      "phone": "600400500",
-      "address": "Paris str Chanche  Lise",
-      "totalNumber": 2,
-      "subtotalPrice": 18,
-      "totalPrice": 38,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "breakfast",
-          "amount": 2,
-          "price": 18,
-          "priceSingle": 9,
-          "params": {
-            "coffee": {
-              "label": "Coffee type",
-              "options": {
-                "latte": "Latte"
-              }
-            }
-          }
-        }
-      ],
-      "id": 5
-    },
-    {
-      "phone": "780 026 241",
-      "address": "Wrocław ul.Uznańskiego 7 m.3",
-      "totalNumber": 2,
-      "subtotalPrice": 38,
-      "totalPrice": 58,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "pizza",
-          "amount": 2,
-          "price": 38,
-          "priceSingle": 19,
-          "params": {
-            "sauce": {
-              "label": "Sauce",
-              "options": {
-                "tomato": "Tomato"
-              }
-            },
-            "toppings": {
-              "label": "Toppings",
-              "options": {
-                "olives": "Olives",
-                "redPeppers": "Red peppers"
-              }
-            },
-            "crust": {
-              "label": "pizza crust",
-              "options": {
-                "cheese": "cheese in edges"
-              }
-            }
-          }
-        }
-      ],
-      "id": 6
-    },
-    {
-      "phone": "000111222",
-      "address": "Teraz ul Tutaj 6 m.9",
-      "totalNumber": 1,
-      "subtotalPrice": 9,
-      "totalPrice": 29,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "amount": 1,
-          "price": 9,
-          "priceSingle": 9,
-          "params": {}
-        }
-      ],
-      "id": 7
-    },
-    {
-      "phone": "222333444",
-      "address": "Now street There 666 h.999",
-      "totalNumber": 1,
-      "subtotalPrice": 23,
-      "totalPrice": 43,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "pizza",
-          "amount": 1,
-          "price": 23,
-          "priceSingle": 23,
-          "params": {
-            "sauce": {
-              "label": "Sauce",
-              "options": {
-                "tomato": "Tomato"
-              }
-            },
-            "toppings": {
-              "label": "Toppings",
-              "options": {
-                "olives": "Olives",
-                "redPeppers": "Red peppers",
-                "mushrooms": "Mushrooms",
-                "basil": "Fresh basil",
-                "salami": "Salami"
-              }
-            },
-            "crust": {
-              "label": "pizza crust",
-              "options": {
-                "thick": "thick"
-              }
-            }
-          }
-        }
-      ],
-      "id": 8
-    },
-    {
-      "phone": "666999000",
-      "address": "Chicago street Manhattan 8888 h.998 ",
-      "totalNumber": 2,
-      "subtotalPrice": 18,
-      "totalPrice": 38,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "cake",
-          "amount": 2,
-          "price": 18,
-          "priceSingle": 9,
-          "params": {}
-        }
-      ],
-      "id": 9
-    },
-    {
-      "phone": "555777888",
-      "address": "Wrocław ul. Kwaśna 4 m.7",
-      "totalNumber": 1,
-      "subtotalPrice": 9,
-      "totalPrice": 29,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "breakfast",
-          "amount": 1,
-          "price": 9,
-          "priceSingle": 9,
-          "params": {
-            "coffee": {
-              "label": "Coffee type",
-              "options": {
-                "latte": "Latte"
-              }
-            }
-          }
-        }
-      ],
-      "id": 10
     }
   ]
 }
