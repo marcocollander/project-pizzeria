@@ -109,14 +109,16 @@
 
     getElements(element) {
       const thisWidget = this;
-
       thisWidget.element = element;
+
       thisWidget.input = thisWidget.element.querySelector(
         select.widgets.amount.input
       );
+
       thisWidget.linkDecrease = thisWidget.element.querySelector(
         select.widgets.amount.linkDecrease
       );
+
       thisWidget.linkIncrease = thisWidget.element.querySelector(
         select.widgets.amount.linkIncrease
       );
@@ -141,7 +143,8 @@
     initActions() {
       const thisWidget = this;
 
-      thisWidget.input.addEventListener('change', function () {
+      thisWidget.input.addEventListener('change', function (event) {
+        event.preventDefault();
         thisWidget.setValue(thisWidget.input.value);
       });
 
@@ -180,8 +183,8 @@
     getElements(element) {
       const thisCart = this;
       thisCart.dom = {};
-
       thisCart.dom.wrapper = element;
+
       thisCart.dom.toggleTrigger = thisCart.dom.wrapper.querySelector(
         select.cart.toggleTrigger
       );
@@ -205,6 +208,14 @@
 
       thisCart.dom.from = thisCart.dom.wrapper.querySelector(
         select.cart.form
+      );
+
+      thisCart.phone = thisCart.dom.wrapper.querySelector(
+        select.cart.phone
+      );
+
+      thisCart.address = thisCart.dom.wrapper.querySelector(
+        select.cart.address
       );
     }
 
@@ -279,9 +290,18 @@
       const url = settings.db.url + '/' + settings.db.order;
 
       const payload = {
-        address: 'test',
+        phone: thisCart.phone.value,
+        address: thisCart.address.value,
+        totalNumber: thisCart.totalNumber,
+        subtotalPrice: thisCart.subtotalPrice,
         totalPrice: thisCart.totalPrice,
+        deliveryFee: thisCart.deliveryFee,
+        products: []
       };
+
+      for (let product of thisCart.products) {
+        payload.products.push(product.getData());
+      }
 
       const options = {
         method: 'POST',
@@ -294,9 +314,6 @@
       fetch(url, options)
         .then(function (response) {
           return response.json();
-        })
-        .then(function (parsedResponse) {
-          console.log('parsedResponse', parsedResponse);
         });
     }
   }
@@ -304,7 +321,6 @@
   class CartProduct {
     constructor(menuProduct, element) {
       const thisCartProduct = this;
-
       thisCartProduct.id = menuProduct.id;
       thisCartProduct.name = menuProduct.name;
       thisCartProduct.price = menuProduct.price;
@@ -384,6 +400,20 @@
         thisCartProduct.remove();
       });
     }
+
+    getData() {
+      const thisCartProduct = this;
+
+      const data = {
+        id: thisCartProduct.id,
+        amount: thisCartProduct.amount,
+        price: thisCartProduct.price,
+        priceSingle: thisCartProduct.priceSingle,
+        params: thisCartProduct.params
+      };
+
+      return data;
+    }
   }
 
   const app = {
@@ -397,22 +427,15 @@
           return rawResponse.json();
         })
         .then(function (parsedResponse) {
-          console.log('parsedResponse', parsedResponse);
-
-          /* save parseResponse as thisApp.data.products */
           thisApp.data.products = parsedResponse;
-
-          /* execute initMenu method */
           thisApp.initMenu();
         });
-      console.log('thisApp.data', JSON.stringify(thisApp.data));
     },
 
     initMenu: function () {
       const thisApp = this;
 
       for (let productData in thisApp.data.products) {
-        //new Product(productData, thisApp.data.products[productData]);
         new Product(thisApp.data.products[productData].id, thisApp.data.products[productData]);
       }
     },
@@ -427,7 +450,6 @@
       const thisApp = this;
 
       thisApp.initData();
-      //thisApp.initMenu();
       thisApp.initCart();
     }
   };
@@ -457,6 +479,7 @@
 
     getElements() {
       const thisProduct = this;
+
       thisProduct.accordionTrigger = thisProduct.element.querySelector(
         select.menuProduct.clickable
       );
@@ -562,12 +585,15 @@
                 options: {}
               };
             }
+
             thisProduct.params[paramId].options[optionId] = option.label;
 
             for (let image of images) {
               image.classList.add(classNames.menuProduct.imageVisible);
             }
+
           } else {
+
             for (let image of images) {
               image.classList.remove(classNames.menuProduct.imageVisible);
             }
@@ -583,6 +609,7 @@
 
     initAmountWidget() {
       const thisProduct = this;
+
       thisProduct.amountWidget =
         new AmountWidget(thisProduct.amountWidgetElem);
 
