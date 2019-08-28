@@ -185,6 +185,7 @@
       thisCart.dom.toggleTrigger = thisCart.dom.wrapper.querySelector(
         select.cart.toggleTrigger
       );
+
       thisCart.dom.productList = thisCart.dom.wrapper.querySelector(
         select.cart.productList
       );
@@ -201,6 +202,10 @@
           select.cart[key]
         );
       }
+
+      thisCart.dom.from = thisCart.dom.wrapper.querySelector(
+        select.cart.form
+      );
     }
 
     initActions() {
@@ -218,6 +223,12 @@
 
       thisCart.dom.productList.addEventListener('remove', function () {
         thisCart.remove(event.detail.cartProduct);
+      });
+
+      thisCart.dom.from.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        thisCart.sendOrder();
       });
     }
 
@@ -261,6 +272,32 @@
       thisCart.products.splice(index, 1);
       cartProduct.dom.wrapper.remove();
       thisCart.update();
+    }
+
+    sendOrder() {
+      const thisCart = this;
+      const url = settings.db.url + '/' + settings.db.order;
+
+      const payload = {
+        address: 'test',
+        totalPrice: thisCart.totalPrice,
+      };
+
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      };
+
+      fetch(url, options)
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (parsedResponse) {
+          console.log('parsedResponse', parsedResponse);
+        });
     }
   }
 
@@ -356,14 +393,14 @@
       const url = settings.db.url + '/' + settings.db.product;
 
       fetch(url)
-        .then(function(rawResponse){
+        .then(function (rawResponse) {
           return rawResponse.json();
         })
-        .then(function(parseResponse){
-          console.log('parseResponse', parseResponse);
+        .then(function (parsedResponse) {
+          console.log('parsedResponse', parsedResponse);
 
           /* save parseResponse as thisApp.data.products */
-          thisApp.data.products = parseResponse;
+          thisApp.data.products = parsedResponse;
 
           /* execute initMenu method */
           thisApp.initMenu();
