@@ -204,39 +204,56 @@
   ],
   "order": [
     {
-      "phone": "1234567",
-      "address": "Gdzieś albo tam",
-      "totalNumber": 2,
-      "subtotalPrice": 40,
-      "totalPrice": 60,
+      "phone": "11223344",
+      "address": "Tam albo gdzieś",
+      "totalNumber": 3,
+      "subtotalPrice": 26,
+      "totalPrice": 46,
       "deliveryFee": 20,
       "products": [
         {
-          "id": "pizza",
-          "amount": 2,
-          "price": 40,
-          "priceSingle": 20,
+          "id": "breakfast",
+          "amount": 1,
+          "price": 9,
+          "priceSingle": 9,
           "params": {
-            "sauce": {
-              "label": "Sauce",
+            "coffee": {
+              "label": "Coffee type",
               "options": {
-                "tomato": "Tomato"
+                "latte": "Latte"
               }
-            },
-            "toppings": {
-              "label": "Toppings",
+            }
+          }
+        },
+        {
+          "id": "salad",
+          "amount": 1,
+          "price": 9,
+          "priceSingle": 9,
+          "params": {
+            "ingredients": {
+              "label": "Ingredients",
               "options": {
+                "cucumber": "Cucumber",
+                "tomatoes": "Tomatoes",
                 "olives": "Olives",
-                "redPeppers": "Red peppers",
-                "greenPeppers": "Green peppers",
-                "mushrooms": "Mushrooms",
-                "basil": "Fresh basil"
+                "herbs": "Fresh herbs"
               }
-            },
-            "crust": {
-              "label": "pizza crust",
+            }
+          }
+        },
+        {
+          "id": "salad",
+          "amount": 1,
+          "price": 8,
+          "priceSingle": 8,
+          "params": {
+            "ingredients": {
+              "label": "Ingredients",
               "options": {
-                "standard": "standard"
+                "cucumber": "Cucumber",
+                "olives": "Olives",
+                "herbs": "Fresh herbs"
               }
             }
           }
@@ -244,5 +261,66 @@
       ],
       "id": 1
     }
-  ]
+  ],
+  "event": [
+    {
+      "id": 1,
+      "date": "2019-01-01",
+      "hour": "12:30",
+      "table": 1,
+      "repeat": false,
+      "duration": 4,
+      "ppl": 3,
+      "starters": []
+    },
+    {
+      "id": 2,
+      "date": "2019-01-01",
+      "hour": "16:00",
+      "table": 3,
+      "repeat": "daily",
+      "duration": 2,
+      "ppl": 3,
+      "starters": [
+        "bread",
+        "lemonWater"
+      ]
+    },
+    {
+      "id": 3,
+      "date": "2019-01-01",
+      "hour": "12:00",
+      "table": 3,
+      "repeat": "daily",
+      "duration": 2,
+      "ppl": 3,
+      "starters": [
+        "bread",
+        "lemonWater"
+      ]
+    },
+    {
+      "id": 4,
+      "date": "2019-01-01",
+      "hour": "13:00",
+      "table": 2,
+      "repeat": "daily",
+      "duration": 4,
+      "ppl": 3,
+      "starters": []
+    },
+    {
+      "id": 5,
+      "date": "2019-01-01",
+      "hour": "18:00",
+      "table": 2,
+      "repeat": "daily",
+      "duration": 2,
+      "ppl": 3,
+      "starters": [
+        "lemonWater"
+      ]
+    }
+  ],
+  "booking": []
 }
