@@ -129,3 +129,4 @@ export const templates = {
   bookingWidget:
     Handlebars.compile(document.querySelector(select.templateOf.bookingWidget).innerHTML),
 };
+
