@@ -1,5 +1,3 @@
-
-
 export class BaseWidget {
   constructor(wrapperElement, initialValue) {
     const thisWidget = this;
@@ -26,22 +24,19 @@ export class BaseWidget {
     thisWidget.renderValue();
   }
 
-  parseVaule(newValue){
+  parseVaule(newValue) {
     return parseInt(newValue);
   }
 
-  isValid(newValue){
+  isValid(newValue) {
     return !isNaN(newValue);
   }
 
-  renderValue(){
-    const thisWidget = this;
-
-    console.log('widget.value: ', thisWidget.value);
-
+  renderValue() {
+    
   }
 
-  announce(){
+  announce() {
     const thisWidget = this;
 
     const event = new CustomEvent('updated', {
