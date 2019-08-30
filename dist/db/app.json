@@ -202,66 +202,7 @@
       }
     }
   ],
-  "order": [
-    {
-      "phone": "11223344",
-      "address": "Tam albo gdzieś",
-      "totalNumber": 3,
-      "subtotalPrice": 26,
-      "totalPrice": 46,
-      "deliveryFee": 20,
-      "products": [
-        {
-          "id": "breakfast",
-          "amount": 1,
-          "price": 9,
-          "priceSingle": 9,
-          "params": {
-            "coffee": {
-              "label": "Coffee type",
-              "options": {
-                "latte": "Latte"
-              }
-            }
-          }
-        },
-        {
-          "id": "salad",
-          "amount": 1,
-          "price": 9,
-          "priceSingle": 9,
-          "params": {
-            "ingredients": {
-              "label": "Ingredients",
-              "options": {
-                "cucumber": "Cucumber",
-                "tomatoes": "Tomatoes",
-                "olives": "Olives",
-                "herbs": "Fresh herbs"
-              }
-            }
-          }
-        },
-        {
-          "id": "salad",
-          "amount": 1,
-          "price": 8,
-          "priceSingle": 8,
-          "params": {
-            "ingredients": {
-              "label": "Ingredients",
-              "options": {
-                "cucumber": "Cucumber",
-                "olives": "Olives",
-                "herbs": "Fresh herbs"
-              }
-            }
-          }
-        }
-      ],
-      "id": 1
-    }
-  ],
+  "order": [],
   "event": [
     {
       "id": 1,

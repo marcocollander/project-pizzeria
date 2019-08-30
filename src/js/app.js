@@ -45,31 +45,36 @@ const app = {
     thisApp.initCart();
   },
 
-  initPages: function() {
+  initPages: function () {
     const thisApp = this;
-    console.log(select.containerOf.pages);
     thisApp.pages = Array.from(document.querySelector(select.containerOf.pages).children);
-    console.log(thisApp.pages);
     thisApp.navLinks = Array.from(document.querySelectorAll(select.nav.links));
-    console.log(thisApp.navLinks);
-    thisApp.activatePage(thisApp.pages[0].id);
-    console.log(thisApp.pages[0].id);
+
+    let pagesMatchingHash = [];
+
+    if (window.location.hash.length > 2) {
+      const idFromHash = window.location.hash.replace('#/', '');
+      pagesMatchingHash = thisApp.pages.filter(function (page) {
+        return page.id == idFromHash;
+      });
+    }
+
+    thisApp.activatePage(
+      pagesMatchingHash.length ? pagesMatchingHash[0].id : thisApp.pages[0].id
+    );
 
     for (let link of thisApp.navLinks) {
       link.addEventListener('click', function (event) {
-        event.preventDefault();
         const clickedElement = this;
+        event.preventDefault();
         const href = clickedElement.getAttribute('href');
-        console.log(href);
         const id = href.replace('#', '');
-        console.log('id: ', id);
-       
-        console.log('function: ', thisApp.activatePage(id));
+        thisApp.activatePage(id);
       });
     }
   },
 
-  activatePage: function(pageId) {
+  activatePage: function (pageId) {
     const thisApp = this;
 
     for (let link of thisApp.navLinks) {
@@ -77,9 +82,11 @@ const app = {
     }
 
     for (let page of thisApp.pages) {
-      page.classList.toggle(classNames.nav.active, page.getAttribute('id') == pageId);
+      page.classList.toggle(classNames.pages.active, page.getAttribute('id') == pageId);
     }
-  }
+
+    window.location.hash = '#/' + pageId;
+  },
 
 };
 
