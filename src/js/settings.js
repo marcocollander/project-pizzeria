@@ -33,7 +33,7 @@ export const select = {
     },
     datePicker: {
       wrapper: '.date-picker',
-      input: `input[name="date"]`,
+      input: 'input[name="date"]',
     },
     hourPicker: {
       wrapper: '.hour-picker',
