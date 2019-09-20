@@ -202,11 +202,68 @@
       }
     }
   ],
-  "order": [],
+  "order": [
+    {
+      "phone": "",
+      "address": "",
+      "totalNumber": 6,
+      "subtotalPrice": 54,
+      "totalPrice": 74,
+      "deliveryFee": 20,
+      "products": [
+        {
+          "id": "breakfast",
+          "amount": 2,
+          "price": 18,
+          "priceSingle": 9,
+          "params": {
+            "coffee": {
+              "label": "Coffee type",
+              "options": {
+                "latte": "Latte"
+              }
+            }
+          }
+        },
+        {
+          "id": "breakfast",
+          "amount": 2,
+          "price": 18,
+          "priceSingle": 9,
+          "params": {
+            "coffee": {
+              "label": "Coffee type",
+              "options": {
+                "latte": "Latte"
+              }
+            }
+          }
+        },
+        {
+          "id": "salad",
+          "amount": 2,
+          "price": 18,
+          "priceSingle": 9,
+          "params": {
+            "ingredients": {
+              "label": "Ingredients",
+              "options": {
+                "cucumber": "Cucumber",
+                "tomatoes": "Tomatoes",
+                "olives": "Olives",
+                "herbs": "Fresh herbs"
+              }
+            }
+          }
+        }
+      ],
+      "id": 1
+    }
+  ],
   "event": [
     {
       "id": 1,
-      "date": "2019-01-01",
+      "date": "2019-09-20",
       "hour": "12:30",
       "table": 1,
       "repeat": false,
@@ -216,7 +273,7 @@
     },
     {
       "id": 2,
-      "date": "2019-01-01",
+      "date": "2019-09-20",
       "hour": "16:00",
       "table": 3,
       "repeat": "daily",
@@ -229,7 +286,7 @@
     },
     {
       "id": 3,
-      "date": "2019-01-01",
+      "date": "2019-09-20",
       "hour": "12:00",
       "table": 3,
       "repeat": "daily",
@@ -242,7 +299,7 @@
     },
     {
       "id": 4,
-      "date": "2019-01-01",
+      "date": "2019-09-20",
       "hour": "13:00",
       "table": 2,
       "repeat": "daily",
@@ -252,7 +309,7 @@
     },
     {
       "id": 5,
-      "date": "2019-01-01",
+      "date": "2019-09-20",
       "hour": "18:00",
       "table": 2,
       "repeat": "daily",
@@ -263,5 +320,19 @@
       ]
     }
   ],
-  "booking": []
+  "booking": [
+    {
+      "id": 2,
+      "date": "2019-09-20",
+      "hour": "16:00",
+      "table": 3,
+      "repeat": "daily",
+      "duration": 2,
+      "ppl": 3,
+      "starters": [
+        "bread",
+        "lemonWater"
+      ]
+    }
+  ]
 }
