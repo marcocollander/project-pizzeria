@@ -1,4 +1,6 @@
+
 export class BaseWidget {
+
   constructor(wrapperElement, initialValue) {
     const thisWidget = this;
     thisWidget.dom = {};
@@ -8,7 +10,6 @@ export class BaseWidget {
 
   get value() {
     const thisWidget = this;
-
     return thisWidget.correctValue;
   }
 
