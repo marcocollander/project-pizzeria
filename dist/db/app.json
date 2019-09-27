@@ -206,7 +206,7 @@
   "event": [
     {
       "id": 1,
-      "date": "2019-09-25",
+      "date": "2019-09-27",
       "hour": "12:30",
       "table": 1,
       "repeat": false,
@@ -216,7 +216,7 @@
     },
     {
       "id": 2,
-      "date": "2019-09-26",
+      "date": "2019-09-28",
       "hour": "16:00",
       "table": 3,
       "repeat": "daily",
@@ -229,7 +229,7 @@
     },
     {
       "id": 3,
-      "date": "2019-09-26",
+      "date": "2019-09-28",
       "hour": "12:00",
       "table": 3,
       "repeat": "daily",
@@ -242,7 +242,7 @@
     },
     {
       "id": 4,
-      "date": "2019-09-26",
+      "date": "2019-09-28",
       "hour": "13:00",
       "table": 2,
       "repeat": "daily",
@@ -252,7 +252,7 @@
     },
     {
       "id": 5,
-      "date": "2019-09-26",
+      "date": "2019-09-28",
       "hour": "18:00",
       "table": 2,
       "repeat": "daily",
@@ -265,8 +265,8 @@
   ],
   "booking": [
     {
-      "date": 2019,
-      "table": 2,
+      "date": "2019-09-29",
+      "table": 3,
       "hour": "18:00",
       "repeat": false,
       "duration": 1,
@@ -274,30 +274,30 @@
       "id": 1
     },
     {
-      "date": 2019,
-      "table": 2,
-      "hour": "19:00",
+      "date": "2019-10-04",
+      "table": 1,
+      "hour": "16:30",
       "repeat": false,
       "duration": 1,
       "ppl": 1,
       "id": 2
     },
     {
-      "date": 2019,
-      "table": 2,
-      "hour": "19:00",
+      "date": "2019-10-06",
+      "table": 1,
+      "hour": "22:00",
       "repeat": false,
       "duration": 1,
       "ppl": 1,
       "id": 3
     },
     {
-      "date": 2019,
-      "table": 2,
-      "hour": "12:00",
+      "date": "2019-10-04",
+      "table": 1,
+      "hour": "16:30",
       "repeat": false,
-      "duration": 1,
-      "ppl": 1,
+      "duration": 3,
+      "ppl": 2,
       "id": 4
     }
   ]

@@ -26,7 +26,7 @@ export class BaseWidget {
   }
 
   parseVaule(newValue) {
-    return parseInt(newValue);
+    return newValue;
   }
 
   isValid(newValue) {
@@ -34,7 +34,7 @@ export class BaseWidget {
   }
 
   renderValue() {
-    
+
   }
 
   announce() {

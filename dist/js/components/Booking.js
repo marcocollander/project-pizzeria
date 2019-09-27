@@ -12,7 +12,6 @@ export class Booking {
     thisBooking.initWidgets();
     thisBooking.getData();
     thisBooking.initActions();
-
   }
 
   render(paramElem) {
@@ -199,5 +198,7 @@ export class Booking {
       .then(function (parsedResponse) {
         console.log('parsedresponse', parsedResponse);
       });
+
+    thisBooking.makeBooked(payload.date, payload.hour, payload.duration, payload.table);
   }
 }
