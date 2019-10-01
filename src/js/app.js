@@ -88,7 +88,7 @@ const app = {
       page.classList.toggle(classNames.pages.active, page.getAttribute('id') == pageId);
     }
 
-    window.location.hash = '#/' + pageId;
+    window.location.hash = '#' + pageId;
   },
 
   initBooking: function () {

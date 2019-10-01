@@ -110,12 +110,12 @@ export class Booking {
     const thisBooking = this;
     const startHour = utils.hourToNumber(hour);
 
-    if (typeof thisBooking.booked[date] === 'undefined') {
+    if (thisBooking.booked[date] === undefined) {
       thisBooking.booked[date] = {};
     }
 
     for (let i = startHour; i < startHour + duration; i += 0.5) {
-      if (typeof thisBooking.booked[date][i] === 'undefined') {
+      if (thisBooking.booked[date][i] === undefined) {
         thisBooking.booked[date][i] = [];
       }
 
@@ -138,8 +138,8 @@ export class Booking {
       }
 
       if (
-        typeof thisBooking.booked[thisBooking.date] !== 'undefined' &&
-        typeof thisBooking.booked[thisBooking.date][thisBooking.hour] !== 'undefined' &&
+        thisBooking.booked[thisBooking.date] !== undefined &&
+        thisBooking.booked[thisBooking.date][thisBooking.hour] !== undefined &&
         thisBooking.booked[thisBooking.date][thisBooking.hour].includes(tableId)
 
       ) {
@@ -155,11 +155,10 @@ export class Booking {
     const thisBooking = this;
     let nameTable;
     for (let table of thisBooking.dom.tables) {
-      console.log(table);
+
       table.addEventListener('click', function () {
         table.classList.add(classNames.booking.tableBooked);
         nameTable = table.innerHTML.slice(6, 7);
-        console.log(nameTable);
         thisBooking.selectedTable = parseInt(nameTable);
       });
     }
@@ -194,9 +193,6 @@ export class Booking {
     fetch(url, options)
       .then(function (response) {
         return response.json();
-      })
-      .then(function (parsedResponse) {
-        console.log('parsedresponse', parsedResponse);
       });
 
     thisBooking.makeBooked(payload.date, payload.hour, payload.duration, payload.table);

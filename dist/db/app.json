@@ -265,40 +265,12 @@
   ],
   "booking": [
     {
-      "date": "2019-09-29",
-      "table": 3,
-      "hour": "18:00",
+      "date": "2019-10-06",
+      "hour": "16:00",
       "repeat": false,
       "duration": 1,
       "ppl": 1,
       "id": 1
-    },
-    {
-      "date": "2019-10-04",
-      "table": 1,
-      "hour": "16:30",
-      "repeat": false,
-      "duration": 1,
-      "ppl": 1,
-      "id": 2
-    },
-    {
-      "date": "2019-10-06",
-      "table": 1,
-      "hour": "22:00",
-      "repeat": false,
-      "duration": 1,
-      "ppl": 1,
-      "id": 3
-    },
-    {
-      "date": "2019-10-04",
-      "table": 1,
-      "hour": "16:30",
-      "repeat": false,
-      "duration": 3,
-      "ppl": 2,
-      "id": 4
     }
   ]
 }
