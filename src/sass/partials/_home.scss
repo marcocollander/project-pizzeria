@@ -1,0 +1,341 @@
+/* Global */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.home-wrapper {
+  margin-top: 40px;
+  padding: 70px 50px;
+  background-color: $color-light;
+
+}
+
+.row {
+  overflow: auto;
+}
+
+.col {
+
+  float: left;
+}
+
+.col-1 {
+  width: 8.334%;
+}
+
+.col-2 {
+  width: 16.667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.334%;
+}
+
+.col-5 {
+  width: 41.667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.334%;
+}
+
+.col-8 {
+  width: 66.667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.334%;
+}
+
+.col-11 {
+  width: 91.667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.card {
+  padding: 5px;
+  border-radius: 5px;
+  font-family: 'Oswald', sans-serif;
+
+  .title {
+    padding: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 1.7em;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-light;
+  }
+}
+
+.image-order {
+  position: relative;
+  background: url('https://i.postimg.cc/PxnbXmh8/pizza-1.jpg') center;
+  background-size: cover;
+
+  margin-right: 5px;
+
+  .description {
+    @include center();
+    @include caption;
+    transition: all 0.3s;
+  }
+
+  a {
+    @include center();
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.5s;
+  }
+}
+
+.image-order:hover {
+  a {
+    margin-top: -10px;
+  }
+
+  .description {
+    opacity: 1;
+  }
+}
+
+.image-book {
+  position: relative;
+  background: url('https://i.postimg.cc/1XCNq6xB/pizza-2.jpg') center;
+  background-size: cover;
+  margin-left: 2px;
+
+  .description {
+    @include center();
+    @include caption;
+    transition: all 0.3s;
+  }
+
+  a {
+    @include center();
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.5s;
+  }
+}
+
+.image-book:hover {
+  a {
+    margin-top: -10px;
+  }
+
+  .description {
+    opacity: 1;
+  }
+}
+
+.opening {
+  margin-top: -10px;
+  background: $color-main;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  color: $color-light;
+
+  .title {
+    padding-top: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 1.7em;
+    text-align: center;
+  }
+
+  .description {
+    text-align: center;
+    margin-top: -10px;
+    padding-bottom: 30px;
+    font-weight: 300;
+  }
+}
+
+.image-carousel {
+  margin-top: 100px;
+  background: url('https://i.postimg.cc/DfsvQk5V/pizza-3.jpg') center;
+  background-size: cover;
+  padding: 57px 75px;
+  border-radius: 5px;
+
+  h3 {
+    opacity: 0;
+  }
+
+}
+
+.carousel {
+  margin-top: 100px;
+  margin-left: 40px;
+
+  .title {
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .author {
+    font-style: italic;
+  }
+}
+
+.view-slide {
+  width: 80px;
+  margin: 0 auto;
+
+  .slide-icon {
+    padding: 5px;
+    display: inline-block;
+  }
+}
+
+.gallery {
+  margin-top: 80px;
+
+  .icons {
+    position: relative;
+    padding: 30px;
+    color: $color-light;
+    font-size: 1.7em;
+    z-index: 2;
+    opacity: 0;
+
+    i {
+      @include center();
+      transition: all 0.5s;
+      margin-left: -15px;
+
+    }
+
+    i:hover {
+      color: $color-main;
+      cursor: pointer;
+    }
+
+    .fa-share-alt {
+      margin-left: 15px;
+    }
+  }
+
+  .icons:hover {
+    opacity: 1;
+    transition: all 0.5s;
+  }
+}
+
+.gallery-picture-one {
+  background: url('https://i.postimg.cc/pXFwWfB6/pizza-4.jpg') center;
+  @include picture;
+  margin-right: 5px;
+  margin-bottom: 5px;
+
+  &::after {
+    @include overlay;
+  }
+
+  &:hover::after {
+    opacity: 0.4;
+  }
+}
+
+.gallery-picture-two {
+  background: url('https://i.postimg.cc/k5YC6nR1/pizza-5.jpg') center;
+  @include picture;
+  margin-right: 5px;
+
+  &::after {
+    @include overlay;
+  }
+
+  &:hover::after {
+    opacity: 0.4;
+  }
+}
+
+.gallery-picture-three {
+  background: url('https://i.postimg.cc/JnHfsjL0/pizza-6.jpg') center;
+  @include picture;
+  margin-bottom: 5px;
+
+  &::after {
+    @include overlay;
+  }
+
+  &:hover::after {
+    opacity: 0.4;
+  }
+
+}
+
+.gallery-picture-four {
+  background: url('https://i.postimg.cc/BnxtK1Jh/pizza-7.jpg') center;
+  @include picture;
+  margin-right: 5px;
+
+  &::after {
+    @include overlay;
+  }
+
+  &:hover::after {
+    opacity: 0.4;
+  }
+}
+
+.gallery-picture-five {
+  background: url('https://i.postimg.cc/Y9VtVppG/pizza-8.jpg') center;
+  @include picture;
+  margin-right: 5px;
+
+  &::after {
+    @include overlay;
+  }
+
+  &:hover::after {
+    opacity: 0.4;
+  }
+}
+
+.gallery-picture-six {
+  background: url('https://i.postimg.cc/521QpmKc/pizza-9.jpg') center;
+  @include picture;
+
+  &::after {
+    @include overlay;
+  }
+
+  &:hover::after {
+    opacity: 0.4;
+  }
+}
+
+.footer {
+  a {
+    color: $color-main;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1em;
+  }
+
+  a:hover {
+    color: $color-success;
+    font-family: 'Lato', sans-serif;
+  }
+}

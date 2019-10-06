@@ -4,8 +4,10 @@ import { select, settings, classNames } from './settings.js';
 import { Booking } from './components/Booking.js';
 
 const app = {
+
   initData: function () {
     const thisApp = this;
+
     thisApp.data = {};
     const url = settings.db.url + '/' + settings.db.product;
 
@@ -45,13 +47,17 @@ const app = {
     thisApp.initData();
     thisApp.initCart();
     thisApp.initBooking();
-    
   },
 
   initPages: function () {
     const thisApp = this;
     thisApp.pages = Array.from(document.querySelector(select.containerOf.pages).children);
     thisApp.navLinks = Array.from(document.querySelectorAll(select.nav.links));
+    thisApp.homeLinks = Array.from(document.querySelectorAll(select.nav.links_home));
+
+    for (let link of thisApp.homeLinks) {
+      thisApp.navLinks.push(link);
+    }
 
     let pagesMatchingHash = [];
 
@@ -88,15 +94,14 @@ const app = {
       page.classList.toggle(classNames.pages.active, page.getAttribute('id') == pageId);
     }
 
-    window.location.hash = '#' + pageId;
+    window.location.hash = '#/' + pageId;
   },
 
   initBooking: function () {
     const thisApp = this;
     const bookingElem = document.querySelector(select.containerOf.booking);
     thisApp.booking = new Booking(bookingElem);
-  }
-
+  },
 };
 
-app.init();
+app.init(); 

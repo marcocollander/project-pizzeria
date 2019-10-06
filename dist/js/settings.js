@@ -67,6 +67,7 @@ export const select = {
   },
   nav: {
     links: '.main-nav a',
+    links_home: '.card a',
   },
 };
 
