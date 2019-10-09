@@ -3,6 +3,7 @@ import { Cart } from './components/Cart.js';
 import { select, settings, classNames } from './settings.js';
 import { Booking } from './components/Booking.js';
 
+
 const app = {
 
   initData: function () {
@@ -104,4 +105,5 @@ const app = {
   },
 };
 
-app.init(); 
+app.init();
+

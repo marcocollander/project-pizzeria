@@ -206,7 +206,7 @@
   "event": [
     {
       "id": 1,
-      "date": "2019-09-27",
+      "date": "2019-10-08",
       "hour": "12:30",
       "table": 1,
       "repeat": false,
@@ -216,7 +216,7 @@
     },
     {
       "id": 2,
-      "date": "2019-09-28",
+      "date": "2019-10-09",
       "hour": "16:00",
       "table": 3,
       "repeat": "daily",
@@ -226,7 +226,7 @@
     },
     {
       "id": 3,
-      "date": "2019-09-28",
+      "date": "2019-10-09",
       "hour": "12:00",
       "table": 3,
       "repeat": "daily",
@@ -236,17 +236,17 @@
     },
     {
       "id": 4,
-      "date": "2019-09-28",
+      "date": "2019-10-11",
       "hour": "13:00",
       "table": 2,
       "repeat": "daily",
-      "duration": 4,
+      "duration": 2,
       "ppl": 3,
       "starters": []
     },
     {
       "id": 5,
-      "date": "2019-09-28",
+      "date": "2019-10-12",
       "hour": "18:00",
       "table": 2,
       "repeat": "daily",

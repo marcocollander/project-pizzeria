@@ -91,7 +91,7 @@
             </div>
           </div>
         </div>
-
+        
         <div class="row">
           <div class="col col-4">
             <div class="image-carousel">
@@ -99,28 +99,7 @@
             </div>
           </div>
           <div class="col col-8">
-            <div class="carousel">
-              <div class="slide">
-                <h3 class="title">Amazing Service!</h3>
-                <p>Bacon ipsum dolor amet kevin shank chuck beef ribs bacon jowl. Beef ribs
-                  drumstick
-                  hamburger tri-tip, kevin cow boudin rump.</p>
-                <p><span class="author">- Margaret Sporer</span></p>
-              </div>
-              <div class="slide">
-                <h3 class="title">Architecto minima!</h3>
-                <p>Cupim drumstick bacon turducken landjaeger burgdoggen t-bone buffalo short loin
-                  pancetta strip steak.</p>
-                <p><span class="author">- John Starfield</span></p>
-              </div>
-              <div class="slide">
-                <h3 class="title">Animi saepe!</h3>
-                <p>Meatloaf sausage pastrami, flank ball tip kielbasa boudin picanha sirloin
-                  prosciutto
-                  beef ribs frankfurter drumstick.</p>
-                <p><span class="author">- Ann Welch</span></p>
-              </div>
-            </div>
+            <div class="carousel"></div>
           </div>
         </div>
 
@@ -144,7 +123,6 @@
                   <i class="fas fa-heart"></i>
                   <i class="fas fa-share-alt"></i>
                 </div>
-
               </div>
             </div>
             <div class="col col-4">
@@ -203,6 +181,14 @@
     </section>
   </div>
 
+  <script id="template-slide" type="text/x-handlebars-template">
+    <div class="slide">
+      <h3 class="title">{{title}}</h3>
+       <p>{{quote}}</p>
+       <p><span class="author">- {{author}}</span></p>
+    </div>
+  </script>
+  
   <script id="template-booking-widget" type="text/x-handlebars-template">
     <div class="booking-widget">
       <h2 class="page__title no-spacing">Book a table</h2>
@@ -379,8 +365,8 @@
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="vendor/range-slider.min.js"></script>
-  <script src="js/components/Slider.js"></script>
   <script src="js/app.js" type="module"></script>
+  <script src="js/components/Slider.js"></script>
 </body>
 
 </html>
