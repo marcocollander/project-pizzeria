@@ -699,6 +699,7 @@ input.error, select.error {
 .rangeSlider {
   top: 12px;
   background: #e6e6e6;
+  background: #78e08f;
   box-shadow: none;
   height: 12px;
 }
@@ -726,6 +727,18 @@ input.error, select.error {
   transition-timing-function: cubic-bezier(0, 1, 0, 1);
   transition: width 100ms;
   box-shadow: none;
+}
+
+.booked-one {
+  background: #78e08f;
+}
+
+.booked-two {
+  background: #f6b93b;
+}
+
+.booked-all {
+  background: #e55039;
 }
 
 .flatpickr-day.disabled {

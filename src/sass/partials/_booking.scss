@@ -60,6 +60,7 @@
 .rangeSlider {
   top: $base-size;
   background: lighten($color-dark, 70%);
+  background: $color-success;
   box-shadow: none;
   height: $base-size;
 
@@ -88,6 +89,19 @@
     transition: width 100ms;
     box-shadow: none;
   }
+
+}
+
+.booked-one {
+  background: $color-success;
+}
+
+.booked-two {
+  background: $color-warning;
+}
+
+.booked-all {
+  background: $color-danger;
 }
 
 .flatpickr-day {

@@ -7,7 +7,7 @@
 
 .rangeSlider {
   position: relative;
-  background: #7f8c8d
+  background: #7f8c8d;
 }
 
 .rangeSlider__horizontal {
@@ -27,7 +27,8 @@
 
 .rangeSlider__fill {
   background: #16a085;
-  position: absolute
+  position: absolute;
+  opacity: 1;
 }
 
 .rangeSlider__fill__horizontal {
