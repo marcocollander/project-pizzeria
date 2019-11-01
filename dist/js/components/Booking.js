@@ -103,8 +103,6 @@ export class Booking {
         }
       }
     }
-
-
   }
 
   makeBooked(date, hour, duration, table) {
@@ -122,7 +120,6 @@ export class Booking {
 
       thisBooking.booked[date][i].push(table);
     }
-    //this.colored(thisBooking.booked);
   }
 
   updateDOM() {
