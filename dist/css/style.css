@@ -688,7 +688,7 @@ input.error, select.error {
 
 .hour-picker {
   position: relative;
-  width: 50%;
+  width: 100%;
 }
 
 .hour-picker .output {

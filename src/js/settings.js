@@ -39,7 +39,7 @@ export const select = {
       wrapper: '.hour-picker',
       input: 'input[type="range"]',
       output: '.output',
-      slider: '.rangeSlider__fill',
+      slider: '.slider',
     },
   },
   cart: {
@@ -90,6 +90,12 @@ export const classNames = {
   pages: {
     active: 'active',
   },
+
+  slider: {
+    booked_one: 'booked-one',
+    booked_two: 'booked-two',
+    booked_all: 'booked_all',
+  }
 };
 
 export const settings = {

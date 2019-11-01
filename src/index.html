@@ -10,7 +10,7 @@
     rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-  <link rel="stylesheet" href="vendor/range-slider.min.css">
+  <link rel="stylesheet" href="vendor/range-slider.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -198,10 +198,10 @@
             <label class="booking-option-title">Pick a date</label>
             <input type="text" name="date">
           </div>
-          <div class="hour-picker range-slider">
+          <div class="hour-picker">
               <div class="output"></div>
               <label class="booking-option-title">Pick a time</label>
-            <input type="range" name="hour" value="12" min="12" max="24" step="0.5">
+            <input type="range" name="hour" value="12" min="12" max="24" step="0.5" class="slider" id="slider">
           </div>
         </div>
         <div class="floor-plan">
@@ -364,7 +364,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
-  <script src="vendor/range-slider.min.js"></script>
+ 
   <script src="js/app.js" type="module"></script>
   <script src="js/components/Slider.js"></script>
 </body>
