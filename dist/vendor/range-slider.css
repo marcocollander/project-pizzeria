@@ -6,9 +6,9 @@
     margin-top: 10px;
     border-radius: 20px;  
     border: none;
-    background: #00ff00;
+    background: #c3c3c3;
     outline: none;
-    opacity: 0.7;
+    opacity: 1;
     -webkit-transition: .2s;
     transition: opacity .2s;
     padding-top: 10px;

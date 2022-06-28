@@ -206,7 +206,7 @@
   "event": [
     {
       "id": 1,
-      "date": "2019-11-01",
+      "date": "2019-11-23",
       "hour": "12:30",
       "table": 1,
       "repeat": false,
@@ -216,7 +216,17 @@
     },
     {
       "id": 2,
-      "date": "2019-11-01",
+      "date": "2019-11-23",
+      "hour": "13:00",
+      "table": 2,
+      "repeat": "daily",
+      "duration": 4,
+      "ppl": 3,
+      "starters": ["bread", "lemonWater"]
+    },
+    {
+      "id": 3,
+      "date": "2019-11-23",
       "hour": "16:00",
       "table": 3,
       "repeat": "daily",
@@ -225,30 +235,20 @@
       "starters": ["bread", "lemonWater"]
     },
     {
-      "id": 3,
-      "date": "2019-10-02",
-      "hour": "12:00",
+      "id": 4,
+      "date": "2019-11-24",
+      "hour": "18:00",
       "table": 3,
       "repeat": "daily",
-      "duration": 2,
-      "ppl": 3,
-      "starters": ["bread", "lemonWater"]
-    },
-    {
-      "id": 4,
-      "date": "2019-10-03",
-      "hour": "13:00",
-      "table": 2,
-      "repeat": "daily",
-      "duration": 2,
+      "duration": 4,
       "ppl": 3,
       "starters": []
     },
     {
       "id": 5,
-      "date": "2019-10-04", 
-      "hour": "18:00",
-      "table": 2,
+      "date": "2019-11-24", 
+      "hour": "19:00",
+      "table": 1,
       "repeat": "daily",
       "duration": 2,
       "ppl": 3,

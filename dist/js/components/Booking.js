@@ -103,6 +103,8 @@ export class Booking {
         }
       }
     }
+
+
   }
 
   makeBooked(date, hour, duration, table) {
@@ -120,6 +122,7 @@ export class Booking {
 
       thisBooking.booked[date][i].push(table);
     }
+    //this.colored(thisBooking.booked);
   }
 
   updateDOM() {
@@ -155,35 +158,29 @@ export class Booking {
 
     let interval = 100 / 24;
     let gradient = ``;
+    const green = [];
+    const red = [];
+    const orange = [];
+
+    console.log(thisBooking.booked);
+    console.log(thisBooking.booked[thisBooking.date]);
 
     for (let hour in thisBooking.booked[thisBooking.date]) {
       if (thisBooking.booked[thisBooking.date][hour].length === 1) {
-        for (let i = 0; i < 24; i++) {
-          if (hours[i] === parseInt(hour)) {
-            console.log(hour);
-            gradient += `,rgb(0,255,0) ${i * interval}%, rgb(0,255,0) ${i * interval}%, rgb(0,255,0) ${2 * i * interval}%, rgb(0,255,0) ${2 * i * interval}%`;
-          }
-        }
+        green.push(hour);
       }
       else if (thisBooking.booked[thisBooking.date][hour].length === 2) {
-        for (let i = 0; i < 24; i++) {
-          if (hours[i] === parseInt(hour)) {
-            console.log(hour);
-            gradient += `,rgb(232,149,23) ${i * interval}%, rgb(232,149,23) ${i * interval}%, rgb(232,149,23) ${2 * i * interval}%, rgb(232,149,23) ${2 * i * interval}%`;
-          }
-
-        }
+        orange.push(hour);
       }
       else if (thisBooking.booked[thisBooking.date][hour].length === 3) {
-        for (let i = 0; i < 24; i++) {
-          if (hours[i] === parseInt(hour)) {
-            console.log(hour);
-            gradient += `,rgb(255, 0, 0) ${i * interval}%, rgb(255, 0, 0) ${i * interval}%, rgb(255, 0, 0) ${2 * i * interval}%, rgb(255, 0, 0) ${2 * i * interval}%`;
-          }
-        }
+        red.push(hour);
       }
 
-      thisBooking.dom.slider.style.background = `linear-gradient(to right, rgb(0, 255, 0) 0%,  rgb(0, 255, 0) 0% ` + gradient + `,rgb(0, 255, 0) 100%, rgb(0, 255, 0) 100%)`;
+      console.log(green.length);
+      console.log(orange.length);      
+      console.log(red.sort.length);      
+
+      thisBooking.dom.slider.style.background = `linear-gradient(to right, rgb(0, 255, 0) ${green.length}%, rgb(255, 120, 0) ${2 * orange.length}%, rg(250, 0, 0) ${3 * red.length}%)`;
     }
   }
 
